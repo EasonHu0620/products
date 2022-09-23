@@ -40,7 +40,9 @@ if os.path.isfile(filename): #檢查檔案在不在
     print('找到檔案了！')
     products = read_file(filename)
 else:
-    print('找不到檔案...')    
+    print('找不到檔案...') 
+
+products = [] #沒有檔案的話要先定義products   
 products = user_input(products)
 print_product(products)
 write_file('products.csv',products)
